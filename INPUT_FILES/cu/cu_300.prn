@@ -1,0 +1,350 @@
+ TASK:     Self-consistent KKR calculation for fcc Cu        22:49 / 30-Nov-22  
+
+ FHNDLR:   Program: KGRN, Version: LV 24 Oct 2013 
+
+           JOB:    cu_300                                  
+           FOR001: ../../kstr/smx/fcc.tfh
+           FOR002: ../pot/cu_300.pot
+           FOR003: ../pot/cu_300.atm
+           FOR004: ../../bmdl/mdl/fcc.mdl
+           FOR006: cu_300.prn
+           FOR009: ../pot/cu_300.zms
+           FOR010: ../chd/cu_300.chd
+           FOR011: /tmp/cu_300.tmp
+
+           MSGL = 0 STRT =A FUNC = SCA EXPAN = S FCD = Y
+
+ TRNSFM:   Single Taylor expansion for the slope matrix
+
+           Slope matrices, fcc (spdf), (kappa*w)^2= 0.0              30-Nov-22  
+
+           ITRANS =  3 (kappa0*w)^2 =   0.000 NDER =  6
+
+ INPUT:    Non-overlapping values are used for f and g
+
+           Higher tails included in the charge density Lmaxt =  4
+
+           Full charge density is calculated for       Lmaxh =  8
+
+           TOLE   =0.1000E-06 TOLEF =0.1000E-06 TOLCPA=0.1000E-05
+           DEPTH  = 1.0000000 IMAGZ = 0.0200000 EPS   = 0.2000000
+           AMIX   = 0.1000000 EFMIX = 1.0000000 ALPCPA= 0.6020000
+
+           NQ     =  1 NT    =  1 NL    =  4 NS    =  1 MNTA  =  1
+           KMSH   =  G IBZ   =  2 NKX   =  0 NKY   = 13 NKZ   =  0
+           ZMSH   =  C NZ1   = 16 NZ2   =  8 NZ3   =  8 NRES  =  4
+           NITER  = 50 NLIN  = 31 NCPA  =  7 AFM   =  P CRT   =  M
+
+ MGAUN:    Generate real Gaunt numbers
+
+ MGAUNT:   NGAUNT =   708
+
+ SET3DI:   Angular integration mesh generated with NTH =  31 NFI =  31
+
+ ROTM3D:   Set up the 3D rotation matrices for IBZ =  2
+
+           Rotation matrices generated, NPRPRT = 48
+
+ SETSYM:   Set up the site-group symmetry elements for IQ =  1
+
+           E     sigb  C31+  C31-  sigf  sige  C4z+  C4z-
+           C2z   sigx  C2d   C4y-  S64-  S62+  sigy  C4x+
+           C2c   S62-  S63+  siga  C33+  C34-  S4x+  S4y-
+           I     C2b   S61-  S61+  C2f   C2e   S4z-  S4z+
+           sigz  C2x   sigd  S4y+  C34+  C32-  C2y   S4x-
+           sigc  C32+  C33-  C2a   S63-  S64+  C4x-  C4y+
+
+
+ MADMTR:   Madelung potential for fcc bulk                           30-Nov-22  
+
+           NLMAD  =  49
+
+ SCAWS:    IQ IT ITA  WS     S      Sm     Si     Sc     hard spheres (s,p,...)
+
+            1  1  1 3.0000 3.0000 3.0000 2.7141 3.8383 2.1000 2.1000 2.1000 2.1000
+
+           Exchange-correlation: P-W
+
+ ATOMI:    Atomic calculation for Cu   WSATM =  3.000000
+
+           NITER =100 IEX   =  4 IWAT  =  0 IZ    = 29 ION   =  0
+
+           Precision on energy, wavefunction, and potential:
+
+           TESTE =  1.00E-12 TESTY =  1.00E-12 TESTV =  1.00E-12
+           VMIX  =  0.300000
+
+           Precision on energy and number of iterations in DIRACA:
+
+           TEST  =  1.00E-12 NES   = 15
+
+           Radial mesh given by (R(1)=DR1/IZ) : 
+
+           JWSA  = 359   JRIA  = 361   JWOA  =   0   NP    = 423
+           DR1   =  0.002000 DX    =  0.030000 RMAX  = 20.000000
+           R(1)  =  0.6498281E-04         R(NP) =  0.2046288E+02
+
+           Exchange-correlation: Perdew-Wang-CA      
+
+           Valence orbital Nodes
+
+                 4s          3
+                 4p          2
+                 3d          0
+                 4f          0
+
+ ATOMC:    Cu     3d10_4s1               Perdew-Wang-CA      
+
+
+           Orbital   Occup.   Valence   deltaQ   Final energy (Rydberg)
+
+            1s1/2      2         0       0.00     -6.4918488E+02
+            2s1/2      2         0       0.00     -7.8021595E+01
+            2p3/2      2         0       0.00     -6.8450545E+01
+            2p1/2      4         0      -0.00     -6.6947552E+01
+            3s1/2      2         0       0.00     -8.4936160E+00
+            3p3/2      2         0       0.00     -5.5261878E+00
+            3p1/2      4         0       0.00     -5.3352689E+00
+            3d5/2      4         1       0.02     -5.0414767E-01
+            3d3/2      6         1       0.03     -4.8420975E-01
+            4s1/2      1         1       0.48     -4.9077497E-01
+
+ TOTALE:   (Rydberg)
+
+           EONE =     -5.412624 VINT =   -192.834524 EKIN =    187.421899
+           ENUC =   -816.695328 ECOR =    451.742799
+           EVAL =    650.746346 EXCT =   -129.790316 EXCC =   -105.323364
+           ETOT =   -102.495808
+
+           Valence energies in the frozen core approximation (Rydbergs)
+
+           Kinetic energy       187.421899
+           El-ion energy       -816.695328
+           El-el energy         551.244572
+           Exc energy           -24.466952
+
+           Total energy        -102.495808
+
+ Atomic charge densities, and potential stored on FOR003
+
+           Self-consistent bulk program: ATOM
+
+
+ OLDIN:    NT     =  1 NS   =  1
+
+           EFGS   =  0.000000
+
+ SETRMS:   dimension for potential spheres     : 363
+
+           dimension for circumscribed spheres : 368
+
+           IT ITA    Si      w       Sc      S
+
+            1  1     355     359     368     359
+                   2.7141  3.0000  3.8383  3.0000
+
+ SETNGB:   Madelung correction for each site and sort
+
+             0.368446
+
+ NXTSWS:   IQ IT ITA MMT Type  NZ ION  ELN   QTR   SPLIT  FIX  CONC
+
+            1  1  1   1   Cu   29  0  11.0  0.000  0.000   N  1.000
+
+           SWS =    3.0000 Alat =  7.6766 Bohr   4.0623 AA
+           VOL =  113.0973 ELT  = 11.0000
+
+ OVRLPS:   Set up the overlapping spheres for IQ =  1
+
+           Number of different overlapping spheres NOV =  1
+
+            jt  wov   ovt jrov   tov(Bohr)   tov(a)      okac     omega
+
+             1   12    1  352   5.428199    0.707107    0.075958  10.53 %
+
+ OVRLPS:   VOL =  113.097336 VOLS =  113.097336 VOLI =    0.000000
+
+ RENORM:   IT         CWS             ZWS
+             1  1   0.18000000E+02 0.28260904E+02
+
+ OPTPOT:   Fbar =  0.000000 g = -0.540604 VolI =  0.000000
+
+           VMTZ(Up,Dwn) =      -0.540604
+
+ EBTOP:      Bot       Top
+
+            -0.690864  9.130364
+
+ KMESH:    Brillouin zone: fcc. NPT =  240
+
+ KMESH:    NKVEC =   240 NKX =  0 NKY = 13 NKZ =  0
+           DKX =  0.166667 DKY =  0.166667 DKZ =  0.166667
+
+ SETIBZ:   dimension of the point group:
+           IMSYMM:   1 IBZR:  48 IBZROT:  48
+
+ ZMESH:    Semi-circular contour
+
+
+           ELT  = 11.000000 EB   = -1.500000 EFX=  0.000000
+           DEPTH=  1.000000 DELTA=  0.079621 EPS=  0.200000
+
+           LZ     Re(z)     Im(z)    Weight
+
+            1  -0.977211 -0.149230  0.109376 -0.349765
+            2  -0.649261 -0.477202  0.502693 -0.157234
+            3  -0.206694 -0.404934  0.305164  0.221040
+            4  -0.036457 -0.187424  0.072137  0.178413
+            5  -0.003731 -0.060971  0.009980  0.081229
+            6  -0.000099 -0.009974  0.000529  0.026522
+
+           LX     Re(z)     Im(z)
+
+            1  -0.200099 -0.009974
+            2  -0.100099 -0.009974
+            3  -0.000099 -0.009974
+            4   0.099901 -0.009974
+            5   0.199901 -0.009974
+
+ WARNING:  Taylor expansion might not be converged:
+
+ LZ exp   E     S00     S00_Dots(1,2,...)
+
+  1  1  -0.98 -1.0425 -1.2293  0.2284 -0.0515  0.0121 -0.0029  0.0007
+  3  1  -0.21  1.1019  0.9402  0.1336  0.0231  0.0042  0.0008  0.0001
+  4  1  -0.04  1.8326  1.4195  0.3045  0.0794  0.0216  0.0060  0.0017
+  5  1  -0.00  1.9912  1.5116  0.3453  0.0958  0.0278  0.0082  0.0025
+  6  1  -0.00  2.0092  1.5218  0.3500  0.0978  0.0285  0.0085  0.0026
+
+ Atom:Cu              S =    3.000000        SWS =    3.000000
+ Exch:P-W                              Date : 30-Nov-22
+
+ Panel	    =  1   s -1/2      p -1/2      d -1/2      f -1/2
+
+ E-nu       =   -0.500000   -0.500000   -0.500000   -0.500000
+ D-nu       =   -0.625499    0.654742    1.293121    2.856529
+ Dnud       =    5.100836    7.304622    3.259653   13.016101
+ Omega-     =    0.095544    0.910783    0.434614    3.880494
+ S*Phisq-   =   -0.239463    0.245193    0.031804    0.337908
+ Phi-/Phi+  =    0.836088    0.677580    0.201234    0.588625
+
+ Mu         =    0.928004    0.906316    6.987244    0.657642
+ Tau        =    0.973072    1.040257    0.990319    1.025367
+ A          =    1.056466    2.692209    0.133696    9.130364
+ C          =   -0.404456    0.410783   -0.065386    3.380494
+ B          =   -0.690864   -0.213870   -0.248609    1.613491
+ V          =   -0.690864   -0.674814   -0.855611   -0.637945
+ D(Ef)      =   -3.476834   -0.599572    3.620608    2.298944
+
+ Bot, Top   =   -0.690864    9.130364
+ V-Madelung =   -0.000000
+ V(S) Up,Dwn=   -0.540604
+ V(W) Up,Dwn=   -0.540604
+
+ EF         =   -0.017079
+
+ VMTZ Up,Dwn=   -0.540604
+
+ Atom:Cu  
+
+ Panel	    =  1   s -1/2      p -1/2      d -1/2      f -1/2
+
+ Nos(Ef)    =    0.865268    0.895922    9.204355    0.034456   11.000000
+ Dos(Ef)    =    0.000000    0.000000    0.000000    0.000000    0.000000
+
+ PRNPRM:   EONE =     -2.307430 VINT =   -190.550698 EKIN =    188.243269
+           ECOR =    458.107418 ENUC =   -827.196292 EMADL=      0.000000
+           EVAL =    102.899320 EXCT =   -130.220612 EXCC =   -105.323430
+           ETOT =   -102.843468 OKAE =      0.000000 E[n] =   -102.843468
+            T*S =      0.000000 E-TS =   -102.843468
+
+           Valence energies in the frozen core approximation (Rydbergs)
+           calculated from output charge density:
+
+           Kinetic energy       188.243269
+           Madelung energy        0.000000
+           El-ion energy       -827.196292
+           El-el energy         561.006737
+           Exc energy           -24.897182
+                              ------------
+           Total               -102.843468
+           Total+OKAE          -102.843468
+           Total+Ewald         -102.838432 4pi SS n(S)=  1.352955
+                              ============
+
+ MLTPM:    Multipole moments
+
+  IQ    s      y      z      x      xy     yz   3zz-1    xz   xx-yy  3xx y
+  xyz   5zz y  5zz z  5zz x  xx  z  3yy x
+ 
+   1 11.6605 0.0000-0.0000-0.0000-0.0000-0.0000-0.0000 0.0000 0.0000 0.0000-0.0000-0.0000 0.0000-0.0000 0.0000 0.0000
+ Tot 11.6605
+
+ MLTPM:    Non vanishing higher moments for IQ =  1
+
+            21 -0.002317
+            25 -0.001958
+            43  0.000053
+            47 -0.000140
+
+ Linear loop not converged
+
+ OPTPOT:   Fbar =  0.000000 g = -0.603209 VolI =  0.000000
+
+           VMTZ(Up,Dwn) =      -0.553125
+
+ KGRN:  Iteration no.   1 Etot =     -102.843468 erren = 1.00000000
+
+        Dyson loops    32 EF   =       -0.134966 erref = 0.01707893
+
+ KGRN:  QSCA =  0.047805
+
+ Potential parameters, charge densities, and potential stored on:    30-Nov-22
+
+ MLTPM:    Multipole moments
+
+  IQ    s      y      z      x      xy     yz   3zz-1    xz   xx-yy  3xx y
+  xyz   5zz y  5zz z  5zz x  xx  z  3yy x
+ 
+   1 11.3165-0.0000-0.0000 0.0000-0.0000 0.0000-0.0000 0.0000-0.0000 0.0000-0.0000 0.0000-0.0000-0.0000 0.0000-0.0000
+ Tot 11.3165
+
+ MLTPM:    Non vanishing higher moments for IQ =  1
+
+            21 -0.001202
+            25 -0.001016
+            43  0.000005
+            47 -0.000012
+
+ Linear loop not converged
+
+ OPTPOT:   Fbar =  0.000000 g = -0.604837 VolI =  0.000000
+
+           VMTZ(Up,Dwn) =      -0.573810
+
+ KGRN:  Iteration no.   2 Etot =     -102.797604 erren = 0.04586307
+
+        Dyson loops    32 EF   =       -0.182501 erref = 0.16906032
+
+ KGRN:  QSCA =  0.038240
+
+ Potential parameters, charge densities, and potential stored on:    30-Nov-22
+
+ MLTPM:    Multipole moments
+
+  IQ    s      y      z      x      xy     yz   3zz-1    xz   xx-yy  3xx y
+  xyz   5zz y  5zz z  5zz x  xx  z  3yy x
+ 
+   1 21.0721-0.0000 0.0000 0.0000 0.0000-0.0000-0.0000 0.0000 0.0000-0.0000 0.0000-0.0000 0.0000 0.0000 0.0000-0.0000
+ Tot 21.0721
+
+ MLTPM:    Non vanishing higher moments for IQ =  1
+
+            21 -0.001336
+            25 -0.001129
+            43  0.000007
+            47 -0.000019
+
+ EFXMOM:** Fermi level not found. EFGS = -0.202435 HX =  0.0980
+
+ EFXMOM called from KKREQ0, LIN=  1
