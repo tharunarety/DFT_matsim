@@ -1,6 +1,6 @@
 BMDL      HP......=N                               22 Jan 08
 JOBNAM...=fcc        MSGL.=  1 NPRN.=  0
-DIR001=mdl/
+DIR001=../bmdl/mdl/
 DIR006=
 Madelung potential for fcc bulk
 NL.....= 7
