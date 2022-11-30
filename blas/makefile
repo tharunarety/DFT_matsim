@@ -8,9 +8,9 @@ LIBRARY	      = blas.a
 
 MAKEFILE      = makefile
 
-LINKER        = gfortran-8
+LINKER        = gfortran
 
-FC            = gfortran-8
+FC            = gfortran
 
 OBJS	      = daxpy.o \
 		dcopy.o \

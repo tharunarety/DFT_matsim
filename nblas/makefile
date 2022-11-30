@@ -9,9 +9,9 @@ LIBRARY	      = nblas.a
 
 MAKEFILE      = makefile
 
-LINKER        = gfortran-8
+LINKER        = gfortran
 
-FC            = gfortran-8
+FC            = gfortran
 
 OBJS	      = zgesv.o \
 		zgetf2.o \

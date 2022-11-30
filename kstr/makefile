@@ -12,11 +12,11 @@ FFLAGS        = -O3 -ffast-math
 !LDFLAGS	      = -O3 -ffast-math -lblas -floop-block
 LDFLAGS	      = -O3 -ffast-math -lblas 
 
-LIBS	      = ../../klib/klib.a -lblas
+LIBS	      = ../klib/klib.a -lblas
 
-LINKER	      = gfortran-8
+LINKER	      = gfortran
 
-FC            = gfortran-8
+FC            = gfortran
 
 MAKEFILE      = makefile
 

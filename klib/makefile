@@ -9,9 +9,9 @@ FFLAGS        = -O3 -fPIC
 
 MAKEFILE      = makefile
 
-LINKER        = gfortran-8
+LINKER        = gfortran
 
-FC            = gfortran-8
+FC            = gfortran
 
 OBJS	      = modules.o \
 		bessinit.o \

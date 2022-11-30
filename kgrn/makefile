@@ -10,7 +10,7 @@ FFLAGS        = -O3 -ffast-math #-floop-block
 
 LDFLAGS	      = -O3 -ffast-math #-lblas -floop-block
 
-LIBS	      = ../../klib/klib.a ../../nblas/nblas.a ../../blas/blas.a
+LIBS	      = ../klib/klib.a ../nblas/nblas.a ../blas/blas.a
 
 LINKER	      = gfortran
 
