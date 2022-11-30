@@ -1,0 +1,324 @@
+SUFFIX        = f 
+
+DEST	      = .
+
+EXTHDRS	      =
+
+HDRS	      =
+
+FFLAGS        = -O3 -ffast-math #-floop-block
+
+LDFLAGS	      = -O3 -ffast-math #-lblas -floop-block
+
+LIBS	      = ../../klib/klib.a ../../nblas/nblas.a ../../blas/blas.a
+
+LINKER	      = gfortran
+
+FC            = gfortran
+
+MAKEFILE      = makefile
+
+OBJS	      = modules.o \
+                0kgrn.o \
+                adam5.o \
+		arrays.o \
+		arrayz.o \
+                atoma.o \
+                atomc.o \
+                atomd.o \
+                atome.o \
+                atomi.o \
+                atomo.o \
+                atomp.o \
+                atoms.o \
+                atomv.o \
+		blochs.o \
+		cdirac.o \
+		chdren.o \
+		der4.o \
+		diff.o \
+		diraca.o \
+		dirac.o \
+		doscpa0.o \
+		doscpa.o \
+		dosef.o \
+		dospth.o \
+		dyson.o \
+		ebtop.o \
+		efxmom.o \
+		eldens.o \
+		elestr.o \
+		entrop.o \
+		expans.o \
+		fcdpth.o \
+		fcdupd.o \
+		fermis.o \
+		fespth.o \
+		fhndlr.o \
+		forcep.o \
+		fullbz.o \
+		functnl.o \
+		fxspin.o \
+		gotora.o \
+		greenf.o \
+		grnfcd.o \
+		gtforc.o \
+		hghasa.o \
+		hghfcd.o \
+		input.o \
+		intgf.o \
+		jobnam.o \
+		kinstr.o \
+		kkrarr.o \
+		kkrdos.o \
+		kkreq0.o \
+		kkreq.o \
+		kkrfcd.o \
+		kkrfes.o \
+		kmesh2.o \
+		kvec.o \
+		lclmtx.o \
+		lclmtz.o \
+		lgaus.o \
+		linarr.o \
+		logdcpa.o \
+		logder0.o \
+		logder.o \
+		logderh.o \
+		logdrr0.o \
+		madmtr.o \
+		mgaunt.o \
+		mixchd.o \
+		mltpm.o \
+		mslope.o \
+		mtrxin.o \
+		nekvec.o \
+		newchd.o \
+		newpot.o \
+		nspstr.o \
+		nxtsws.o \
+		oldin.o \
+		optpot.o \
+		ordgnt.o \
+		ovrlps.o \
+		pathop.o \
+		pathop0.o \
+		poison.o \
+		poisson.o \
+		potsph.o \
+		primkv.o \
+		prinfo.o \
+		prnprm.o \
+		pwlda.o \
+		renorm.o \
+		rootf.o \
+		rotchd.o \
+		rotgf.o \
+		rotm3d.o \
+                scaws.o \
+		screen.o \
+		set3di.o \
+		setdrc.o \
+		setcst.o \
+		setexp.o \
+		setibz.o \
+		setkms.o \
+		setngb.o \
+		setpsn.o \
+		setrms.o \
+		setsws.o \
+		setsym.o \
+		setzmp.o \
+		singlg.o \
+		sites.o \
+		slfarr.o \
+		slfcfg.o \
+		slfcls.o \
+		slfcns.o \
+		slfstr.o \
+		softc.o \
+		softi.o \
+		softp.o \
+		smtrx.o \
+		start.o \
+		thfpot.o \
+		totale.o \
+		trmtrx.o \
+		trmtrz.o \
+		trmtrzr.o \
+		trnsfm.o \
+		update.o \
+		wavefc.o \
+		wmsg.o \
+		xchstr.o \
+		zmesh.o
+
+SRCS	      = modules.for \
+                0kgrn.for \
+                adam5.for \
+		arrays.for \
+		arrayz.for \
+                atoma.for \
+                atomc.for \
+                atomd.for \
+                atome.for \
+                atomi.for \
+                atomo.for \
+                atomp.for \
+                atoms.for \
+                atomv.for \
+                blochs.for \
+		cdirac.for \
+		chdren.for \
+		der4.for \
+		diff.for \
+		diraca.for \
+		dirac.for \
+		doscpa0.for \
+		dosef.for \
+		doscpa.for \
+		dospth.for \
+		dyson.for \
+		ebtop.for \
+		efxmom.for \
+		eldens.for \
+		elestr.for \
+		entrop.for \
+		expans.for \
+		fcdpth.for \
+		fcdupd.for \
+		fermis.for \
+		fespth.for \
+		fhndlr.for \
+		forcep.for \
+		functnl.for \
+		fxspin.for \
+		gotora.for \
+		greenf.for \
+		grnfcd.for \
+		gtforc.for \
+		hghasa.for \
+		hghfcd.for \
+		input.for \
+		intgf.for \
+		jobnam.for \
+		kinstr.for \
+		kkrarr.for \
+		kkrdos.for \
+		kkreq0.for \
+		kkreq.for \
+		kkrfcd.for \
+		kkrfes.for \
+		kmesh2.for \
+		kvec.for \
+		lclmtx.for \
+		lclmtz.for \
+		lgaus.for \
+		linarr.for \
+		logdcpa.for \
+		logder0.for \
+		logder.for \
+		logderh.for \
+		logdrr0.for \
+		madmtr.for \
+		mgaunt.for \
+		mixchd.for \
+		mltpm.for \
+		mslope.for \
+		mtrxin.for \
+		nekvec.for \
+		newchd.for \
+		newpot.for \
+		nspstr.for \
+		nxtsws.for \
+		oldin.for \
+		optpot.for \
+		ordgnt.for \
+		ovrlps.for \
+		pathop.for \
+		pathop0.for \
+		poison.for \
+		poisson.for \
+		potsph.for \
+		primkv.for \
+		prinfo.for \
+		prnprm.for \
+		pwlda.for \
+		renorm.for \
+		rootf.for \
+		rotchd.for \
+		rotgf.for \
+		rotm3d.for \
+		screen.for \
+                scaws.for \
+		set3di.for \
+		setdrc.for \
+		setcst.for \
+		setexp.for \
+		setibz.for \
+		setkms.for \
+		setngb.for \
+		setpsn.for \
+		setrms.for \
+		setsws.for \
+		setsym.for \
+		setzmp.for \
+		singlg.for \
+		sites.for \
+		slfarr.for \
+		slfcfg.for \
+		slfcls.for \
+		slfcns.for \
+		slfstr.for \
+		softc.for \
+		softi.for \
+		softp.for \
+		smtrx.for \
+		start.for \
+		thfpot.for \
+		totale.for \
+		trmtrx.for \
+		trmtrz.for \
+		trmtrzr.for \
+		trnsfm.for \
+		update.for \
+		wavefc.for \
+		wmsg.for \
+		xchstr.for \
+		zmesh.for
+
+PRINT         = pr
+
+PROGRAM	      = kgrn_cpa
+
+all:            $(PROGRAM)
+
+$(PROGRAM):     $(OBJS)
+		@echo -n "Loading $(PROGRAM) ... "
+		@$(LINKER) $(LDFLAGS) $(OBJS) $(LIBS) -o $(PROGRAM)
+		@echo "done"
+
+clean:;         @rm -f $(OBJS)
+
+depend:;        @mkmf -f $(MAKEFILE) PROGRAM=$(PROGRAM) DEST=$(DEST)
+
+index:;         @ctags -wx $(HDRS) $(SRCS)
+
+install:        $(PROGRAM)
+		@echo Installing $(PROGRAM) in $(DEST)
+		@install -s $(PROGRAM) $(DEST)
+
+print:;         @$(PRINT) $(HDRS) $(SRCS)
+
+program:        $(PROGRAM)
+
+tags:           $(HDRS) $(SRCS); @ctags $(HDRS) $(SRCS)
+
+update:         $(DEST)/$(PROGRAM)
+
+.SUFFIXES:      .for $(SUFFIXES)
+
+COMPILE.for=    $(FC) $(FFLAGS) $(TARGET_ARCH) -c
+.for.o:
+		$(COMPILE.for) $(OUTPUT_OPTION) $<
+###

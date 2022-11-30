@@ -1,0 +1,43 @@
+SUFFIX        = f 
+
+DEST	      = .
+
+FFLAGS        = -fast -m32 -xarch=sparcvis -xprefetch=yes -xlic_lib=sunperf
+
+LIBRARY	      = blas.a
+
+MAKEFILE      = makefile
+
+LINKER        = f90
+
+FC            = f90
+
+OBJS	      = daxpy.o \
+		dcopy.o \
+		ddot.o \
+		dgemm.o \
+		dger.o \
+		dscal.o \
+		dsymm.o \
+		dswap.o \
+		dtrsm.o \
+		idamax.o \
+		lsame.o \
+		xerbla.o
+
+SRCS	      = daxpy.f \
+		dcopy.f \
+		ddot.f \
+		dgemm.f \
+		dger.f \
+		dscal.f \
+		dsymm.f \
+		dswap.o \
+		dtrsm.f \
+		idamax.f \
+		lsame.f \
+		xerbla.f
+
+$(LIBRARY):	$(OBJS); ar -r $(LIBRARY) *.o
+		@echo -n "Loading $(LIBRARY) ... "
+		@echo "done"

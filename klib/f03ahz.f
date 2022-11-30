@@ -1,0 +1,34 @@
+      SUBROUTINE F03AHZ(A, IA, M, N, B)
+C     MARK 11 RELEASE. NAG COPYRIGHT 1983.
+C
+C     DOUBLE PRECISION VERSION WITH COMPLEX
+C
+C     COMPUTES  B = L**(-1) * B  (COMPLEX) WHERE
+C     L IS A LOWER TRIANGULAR MATRIX OF THE SPECIAL FORM
+C     ( L11  0 )
+C     ( L21  I )
+C     L11 IS LOWER TRIANGULAR OF ORDER N,
+C     L21 IS RECTANGULAR (M-N) BY N.
+C     A HOLDS THE ELEMENTS OF THE FIRST N COLUMNS OF L.
+C
+C     .. SCALAR ARGUMENTS ..
+      INTEGER IA, M, N
+C     .. ARRAY ARGUMENTS ..
+      COMPLEX*16 A(IA,N), B(M)
+C     ..
+C     .. LOCAL SCALARS ..
+      COMPLEX*16 X
+      INTEGER I, J, JP1
+C     ..
+C
+      DO 40 J=1,N
+         B(J) = B(J)/A(J,J)
+         JP1 = J + 1
+         IF (JP1.GT.M) GO TO 40
+         X = B(J)
+         DO 20 I=JP1,M
+            B(I) = B(I) - A(I,J)*X
+   20    CONTINUE
+   40 CONTINUE
+      RETURN
+      END

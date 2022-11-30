@@ -1,0 +1,31 @@
+      SUBROUTINE F04AKZ(A, IA, N, B)
+C     MARK 11 RELEASE. NAG COPYRIGHT 1983.
+C
+C     DOUBLE PRECISION VERSION WITH COMPLEX
+C
+C     COMPUTES  B = U**(-1) * B  (COMPLEX) WHERE
+C     A HOLDS THE SUPERDIAGONAL ELEMENTS OF U AND
+C     THE DIAGONAL ELEMENTS OF U ARE TAKEN TO BE 1.0 .
+C
+C     .. SCALAR ARGUMENTS ..
+      INTEGER IA, N
+C     .. ARRAY ARGUMENTS ..
+      COMPLEX*16 A(IA,N), B(N)
+C     ..
+C     .. LOCAL SCALARS ..
+      COMPLEX*16 X
+      INTEGER I, J, JM1, NJ, NM1
+C     ..
+C
+      NM1 = N - 1
+      IF (NM1.LE.0) GO TO 60
+      DO 40 NJ=1,NM1
+         J = N - NJ + 1
+         JM1 = J - 1
+         X = B(J)
+         DO 20 I=1,JM1
+            B(I) = B(I) - A(I,J)*X
+   20    CONTINUE
+   40 CONTINUE
+   60 RETURN
+      END
