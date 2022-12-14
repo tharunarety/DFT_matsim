@@ -1,0 +1,51 @@
+ FHNDLR:   Program: BMDL, Version: LV  05 Mar 1999                   TM: 14:48
+           Madelung potential, fco0+3.0%                             14-Dec-22  
+
+           JOB   : fco3      
+           FOR001: mdl/fco3.mdl                                                
+           FOR006: ./fco3.prn                                                  
+
+ PRIMV:    Default choice of primitive vectors.
+
+           A     =  1.000000 B     =  0.941748 C     =  0.971748
+           ALPHA = 90.000000 BETA  = 90.000000 GAMMA = 90.000000
+
+           Primitive vectors for Fco lattice in
+           units of the lattice spacing a:
+
+           (   0.50000,   0.00000,   0.48587 )
+           (   0.50000,   0.47087,   0.00000 )
+           (   0.00000,   0.47087,   0.48587 )
+
+           Basis vectors:            NQ3 =   1
+
+           (   0.00000,   0.00000,   0.00000 )
+
+
+ PRIMKR:   Wigner Seitz radius:  0.379414 VOL   =  0.228785
+
+
+           Primitive vectors of reciprocal space
+           in units of 2*pi/a
+
+           (   1.00000,  -1.06186,   1.02907  )
+           (   1.00000,   1.06186,  -1.02907  )
+           (  -1.00000,   1.06186,   1.02907  )
+
+ SET3D:    Basis vectors in 3D cell are set.
+
+ BMDL:     NPRN  =  0
+           NL    =  7 NQ    =  1 NLM   = 49 NLMQ  = 49
+           MSGL  =  1
+
+           AMAX  =  4.500000 BMAX  =  4.500000 ALAMDA=  2.500000
+           RMAX  =  1.800000 GMAX  = 22.500000
+
+ LATT3M:   R1    =    0.0000 RA    =    1.8000 G1    =    0.0000
+           GA    =   22.5000
+
+           NUMR  =  9 NUMG  =  7 NUMVR =103 NUMVG = 59
+
+ BMDL:    CMDL=    1.7916728802
+
+           Madelung-potential matrices stored on FOR001

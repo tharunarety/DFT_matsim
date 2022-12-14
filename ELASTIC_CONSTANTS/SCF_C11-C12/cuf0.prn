@@ -1,0 +1,1117 @@
+ TASK:     Self-consistent KKR calculation for fcc Cu, (C11-C15:09 / 14-Dec-22  
+
+ FHNDLR:   Program: KGRN, Version: LV 24 Oct 2013 
+
+           JOB:    cuf0                                    
+           FOR001: ../STR_C11-C12/smx/fco0.tfh
+           FOR002: pot/cuf0.pot
+           FOR003: pot/cuf0.atm
+           FOR004: ../MDL_C11-C12/mdl/fco0.mdl
+           FOR006: cuf0.prn
+           FOR009: pot/cuf0.zms
+           FOR010: chd/cuf0.chd
+           FOR011: /tmp/cuf0.tmp
+
+           MSGL = 0 STRT =A FUNC = SCA EXPAN = S FCD = Y
+
+ TRNSFM:   Single Taylor expansion for the slope matrix
+
+           Slope matrices, fco (spdf) DeltaE/V = (C11-C12)*e^2+O[e^4]14-Dec-22  
+
+           ITRANS =  3 (kappa0*w)^2 =   0.000 NDER =  6
+
+ INPUT:    Non-overlapping values are used for f and g
+
+           Higher tails included in the charge density Lmaxt =  4
+
+           Full charge density is calculated for       Lmaxh =  8
+
+           TOLE   =0.1000E-06 TOLEF =0.1000E-06 TOLCPA=0.1000E-05
+           DEPTH  = 1.0000000 IMAGZ = 0.0200000 EPS   = 0.2000000
+           AMIX   = 0.0200000 EFMIX = 0.1000000 ALPCPA= 0.6020000
+
+           NQ     =  1 NT    =  1 NL    =  4 NS    =  1 MNTA  =  1
+           KMSH   =  G IBZ   = 11 NKX   = 27 NKY   = 27 NKZ   = 27
+           ZMSH   =  C NZ1   = 16 NZ2   =  8 NZ3   =  8 NRES  =  4
+           NITER  = 50 NLIN  = 31 NCPA  =  7 AFM   =  P CRT   =  M
+
+ MGAUN:    Generate real Gaunt numbers
+
+ MGAUNT:   NGAUNT =   708
+
+ SET3DI:   Angular integration mesh generated with NTH =  31 NFI =  31
+
+ ROTM3D:   Set up the 3D rotation matrices for IBZ = 11
+
+           Rotation matrices generated, NPRPRT =  8
+
+ SETSYM:   Set up the site-group symmetry elements for IQ =  1
+
+           E     C2z   sigx  sigy  I     sigz  C2x   C2y 
+
+
+ MADMTR:   Madelung potential, fco0                                  14-Dec-22  
+
+           NLMAD  =  49
+
+ SCAWS:    IQ IT ITA  WS     S      Sm     Si     Sc     hard spheres (s,p,...)
+
+            1  1  1 2.6868 2.6868 2.6868 2.4308 3.4377 1.8808 1.8808 1.8808 1.8808
+
+           Exchange-correlation: P-W
+
+ ATOMI:    Atomic calculation for Cu   WSATM =  2.686842
+
+           NITER =100 IEX   =  4 IWAT  =  0 IZ    = 29 ION   =  0
+
+           Precision on energy, wavefunction, and potential:
+
+           TESTE =  1.00E-12 TESTY =  1.00E-12 TESTV =  1.00E-12
+           VMIX  =  0.300000
+
+           Precision on energy and number of iterations in DIRACA:
+
+           TEST  =  1.00E-12 NES   = 15
+
+           Radial mesh given by (R(1)=DR1/IZ) : 
+
+           JWSA  = 355   JRIA  = 357   JWOA  =   0   NP    = 421
+           DR1   =  0.002000 DX    =  0.030000 RMAX  = 20.000000
+           R(1)  =  0.6561977E-04         R(NP) =  0.1946011E+02
+
+           Exchange-correlation: Perdew-Wang-CA      
+
+           Valence orbital Nodes
+
+                 4s          3
+                 4p          2
+                 3d          0
+                 4f          0
+
+ ATOMC:    Cu     3d10_4s1               Perdew-Wang-CA      
+
+
+           Orbital   Occup.   Valence   deltaQ   Final energy (Rydberg)
+
+            1s1/2      2         0       0.00     -6.4918486E+02
+            2s1/2      2         0       0.00     -7.8021579E+01
+            2p3/2      2         0       0.00     -6.8450530E+01
+            2p1/2      4         0      -0.00     -6.6947537E+01
+            3s1/2      2         0       0.00     -8.4936051E+00
+            3p3/2      2         0       0.00     -5.5261772E+00
+            3p1/2      4         0       0.00     -5.3352585E+00
+            3d5/2      4         1       0.04     -5.0413694E-01
+            3d3/2      6         1       0.04     -4.8419900E-01
+            4s1/2      1         1       0.58     -4.9075736E-01
+
+ TOTALE:   (Rydberg)
+
+           EONE =     -5.412499 VINT =   -192.834613 EKIN =    187.422114
+           ENUC =   -816.695958 ECOR =    451.743107
+           EVAL =    650.746850 EXCT =   -129.790335 EXCC =   -105.323357
+           ETOT =   -102.495844
+
+           Valence energies in the frozen core approximation (Rydbergs)
+
+           Kinetic energy       187.422114
+           El-ion energy       -816.695958
+           El-el energy         551.244978
+           Exc energy           -24.466978
+
+           Total energy        -102.495844
+
+ Atomic charge densities, and potential stored on FOR003
+
+           Self-consistent bulk program: ATOM
+
+
+ OLDIN:    NT     =  1 NS   =  1
+
+           EFGS   =  0.000000
+
+ SETRMS:   dimension for potential spheres     : 359
+
+           dimension for circumscribed spheres : 364
+
+           IT ITA    Si      w       Sc      S
+
+            1  1     351     355     364     355
+                   2.4308  2.6868  3.4377  2.6868
+
+ SETNGB:   Madelung correction for each site and sort
+
+             0.411390
+
+ NXTSWS:   IQ IT ITA MMT Type  NZ ION  ELN   QTR   SPLIT  FIX  CONC
+
+            1  1  1   1   Cu   29  0  11.0  0.000  0.000   N  1.000
+
+           SWS =    2.6868 Alat =  6.8753 Bohr   3.6383 AA
+           VOL =   81.2484 ELT  = 11.0000
+
+ OVRLPS:   Set up the overlapping spheres for IQ =  1
+
+           Number of different overlapping spheres NOV =  1
+
+            jt  wov   ovt jrov   tov(Bohr)   tov(a)      okac     omega
+
+             1   12    1  348   4.861571    0.707107    0.043770  10.53 %
+
+ OVRLPS:   VOL =   81.248433 VOLS =   81.248433 VOLI =    0.000000
+
+ RENORM:   IT         CWS             ZWS
+             1  1   0.18000000E+02 0.28041334E+02
+
+ OPTPOT:   Fbar =  0.000000 g = -0.637648 VolI =  0.000000
+
+           VMTZ(Up,Dwn) =      -0.637648
+
+ EBTOP:      Bot       Top
+
+            -0.702438 11.176232
+
+ KMESH:    Brillouin zone: fco. NPT =19683
+
+ KMESH:    NKVEC = 19683 NKX = 27 NKY = 27 NKZ = 27
+           DKX =  0.076923 DKY =  0.076923 DKZ =  0.076923
+
+ SETIBZ:   dimension of the point group:
+           IMSYMM:   1 IBZR:   8 IBZROT:   8
+
+ ZMESH:    Semi-circular contour
+
+
+           ELT  = 11.000000 EB   = -1.500000 EFX=  0.000000
+           DEPTH=  1.000000 DELTA=  0.079621 EPS=  0.200000
+
+           LZ     Re(z)     Im(z)    Weight
+
+            1  -0.977211 -0.149230  0.109376 -0.349765
+            2  -0.649261 -0.477202  0.502693 -0.157234
+            3  -0.206694 -0.404934  0.305164  0.221040
+            4  -0.036457 -0.187424  0.072137  0.178413
+            5  -0.003731 -0.060971  0.009980  0.081229
+            6  -0.000099 -0.009974  0.000529  0.026522
+
+           LX     Re(z)     Im(z)
+
+            1  -0.200099 -0.009974
+            2  -0.100099 -0.009974
+            3  -0.000099 -0.009974
+            4   0.099901 -0.009974
+            5   0.199901 -0.009974
+
+ WARNING:  Taylor expansion might not be converged:
+
+ LZ exp   E     S00     S00_Dots(1,2,...)
+
+  3  1  -0.21  1.1479  0.9733  0.1432  0.0256  0.0048  0.0009  0.0002
+  4  1  -0.04  1.7300  1.3578  0.2786  0.0695  0.0181  0.0048  0.0013
+  5  1  -0.00  1.8532  1.4317  0.3098  0.0814  0.0223  0.0063  0.0018
+  6  1  -0.00  1.8672  1.4399  0.3133  0.0828  0.0229  0.0064  0.0018
+
+ Atom:Cu              S =    2.686842        SWS =    2.686842
+ Exch:P-W                              Date : 14-Dec-22
+
+ Panel	    =  1   s -1/2      p -1/2      d -1/2      f -1/2
+
+ E-nu       =   -0.500000   -0.500000   -0.500000   -0.500000
+ D-nu       =   -0.475342    0.651803    1.184006    2.781821
+ Dnud       =    5.698133    7.696003    3.477501   12.819991
+ Omega-     =    0.190082    1.196439    0.620554    4.707857
+ S*Phisq-   =   -0.333918    0.327784    0.052514    0.414291
+ Phi-/Phi+  =    0.850705    0.690594    0.228097    0.583829
+
+ Mu         =    0.829670    0.845196    5.275560    0.668713
+ Tau        =    0.900646    1.007728    0.960676    1.025707
+ A          =    1.926712    3.874637    0.460715   11.176232
+ C          =   -0.309918    0.696439    0.120554    4.207857
+ B          =   -0.702438   -0.129496   -0.172899    2.033636
+ V          =   -0.702438   -0.727484   -1.030583   -0.759420
+ D(Ef)      =   -2.107648   -0.264191   -4.736193    2.332082
+
+ Bot, Top   =   -0.702438   11.176232
+ V-Madelung =   -0.000000
+ V(S) Up,Dwn=   -0.637648
+ V(W) Up,Dwn=   -0.637648
+
+ EF         =    0.076767
+
+ VMTZ Up,Dwn=   -0.637648
+
+ Atom:Cu  
+
+ Panel	    =  1   s -1/2      p -1/2      d -1/2      f -1/2
+
+ Nos(Ef)    =    0.802091    1.010017    9.132103    0.055789   11.000000
+ Dos(Ef)    =    0.000000    0.000000    0.000000    0.000000    0.000000
+
+ PRNPRM:   EONE =     -1.042635 VINT =   -189.811846 EKIN =    188.769211
+           ECOR =    461.155463 ENUC =   -832.302675 EMADL=      0.000000
+           EVAL =    104.434920 EXCT =   -130.446962 EXCC =   -105.323700
+           ETOT =   -103.066343 OKAE =      0.000000 E[n] =   -103.066343
+            T*S =      0.000000 E-TS =   -103.066343
+
+           Valence energies in the frozen core approximation (Rydbergs)
+           calculated from output charge density:
+
+           Kinetic energy       188.769211
+           Madelung energy        0.000000
+           El-ion energy       -832.302675
+           El-el energy         565.590383
+           Exc energy           -25.123262
+                              ------------
+           Total               -103.066343
+           Total+OKAE          -103.066343
+           Total+Ewald         -103.057733 4pi SS n(S)=  1.869350
+                              ============
+
+ MLTPM:    Multipole moments
+
+  IQ    s      y      z      x      xy     yz   3zz-1    xz   xx-yy  3xx y
+  xyz   5zz y  5zz z  5zz x  xx  z  3yy x
+ 
+   1 10.7996 0.0000-0.0000 0.0000-0.0000-0.0000-0.0000 0.0000 0.0000 0.0000 0.0000 0.0000-0.0000 0.0000 0.0000 0.0000
+ Tot 10.7996
+
+ MLTPM:    Non vanishing higher moments for IQ =  1
+
+            21 -0.000585
+            25 -0.000494
+            43  0.000061
+            47 -0.000162
+
+ Linear loop not converged
+
+ OPTPOT:   Fbar =  0.000000 g = -0.693390 VolI =  0.000000
+
+           VMTZ(Up,Dwn) =      -0.648796
+
+ KGRN:  Iteration no.   1 Etot =     -103.066343 erren = 1.00000000
+
+        Dyson loops    32 EF   =        0.064238 erref = 0.07676691
+
+ KGRN:  QSCA =  0.011221
+
+ Potential parameters, charge densities, and potential stored on:    14-Dec-22
+
+ MLTPM:    Multipole moments
+
+  IQ    s      y      z      x      xy     yz   3zz-1    xz   xx-yy  3xx y
+  xyz   5zz y  5zz z  5zz x  xx  z  3yy x
+ 
+   1 14.4258 0.0000 0.0000 0.0000-0.0000-0.0000-0.0000 0.0000 0.0000 0.0000-0.0000 0.0000 0.0000 0.0000-0.0000 0.0000
+ Tot 14.4258
+
+ MLTPM:    Non vanishing higher moments for IQ =  1
+
+            21 -0.001307
+            25 -0.001105
+            43  0.000028
+            47 -0.000075
+
+ Linear loop not converged
+
+ OPTPOT:   Fbar =  0.000000 g = -0.694382 VolI =  0.000000
+
+           VMTZ(Up,Dwn) =      -0.667031
+
+ KGRN:  Iteration no.   2 Etot =     -102.879626 erren = 0.18671736
+
+        Dyson loops    32 EF   =       -0.016068 erref = 0.09477977
+
+ KGRN:  QSCA =  0.061195
+
+ Potential parameters, charge densities, and potential stored on:    14-Dec-22
+
+ MLTPM:    Multipole moments
+
+  IQ    s      y      z      x      xy     yz   3zz-1    xz   xx-yy  3xx y
+  xyz   5zz y  5zz z  5zz x  xx  z  3yy x
+ 
+   1 11.0681 0.0000-0.0000 0.0000-0.0000-0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000-0.0000 0.0000
+ Tot 11.0681
+
+ MLTPM:    Non vanishing higher moments for IQ =  1
+
+            21 -0.001364
+            25 -0.001153
+            43  0.000028
+            47 -0.000073
+
+ Linear loop not converged
+
+ OPTPOT:   Fbar =  0.000000 g = -0.703930 VolI =  0.000000
+
+           VMTZ(Up,Dwn) =      -0.696550
+
+ KGRN:  Iteration no.   3 Etot =     -102.850664 erren = 0.02896143
+
+        Dyson loops    32 EF   =       -0.044319 erref = 0.02578048
+
+ KGRN:  QSCA =  0.050959
+
+ Potential parameters, charge densities, and potential stored on:    14-Dec-22
+
+ MLTPM:    Multipole moments
+
+  IQ    s      y      z      x      xy     yz   3zz-1    xz   xx-yy  3xx y
+  xyz   5zz y  5zz z  5zz x  xx  z  3yy x
+ 
+   1 11.0288 0.0000 0.0000 0.0000-0.0000-0.0000 0.0000 0.0000 0.0000 0.0000-0.0000 0.0000 0.0000 0.0000-0.0000 0.0000
+ Tot 11.0288
+
+ MLTPM:    Non vanishing higher moments for IQ =  1
+
+            21 -0.001284
+            25 -0.001085
+            43  0.000030
+            47 -0.000078
+
+ Linear loop not converged
+
+ OPTPOT:   Fbar =  0.000000 g = -0.709306 VolI =  0.000000
+
+           VMTZ(Up,Dwn) =      -0.709306
+
+ KGRN:  Iteration no.   4 Etot =     -102.851427 erren = 0.00076305
+
+        Dyson loops    32 EF   =       -0.062309 erref = 0.01820023
+
+ KGRN:  QSCA =  0.044483
+
+ Potential parameters, charge densities, and potential stored on:    14-Dec-22
+
+ MLTPM:    Multipole moments
+
+  IQ    s      y      z      x      xy     yz   3zz-1    xz   xx-yy  3xx y
+  xyz   5zz y  5zz z  5zz x  xx  z  3yy x
+ 
+   1 11.0224 0.0000-0.0000 0.0000-0.0000-0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000-0.0000 0.0000 0.0000 0.0000
+ Tot 11.0224
+
+ MLTPM:    Non vanishing higher moments for IQ =  1
+
+            21 -0.001248
+            25 -0.001054
+            43  0.000028
+            47 -0.000074
+
+ Linear loop not converged
+
+ OPTPOT:   Fbar =  0.000000 g = -0.712059 VolI =  0.000000
+
+           VMTZ(Up,Dwn) =      -0.712059
+
+ KGRN:  Iteration no.   5 Etot =     -102.852220 erren = 0.00079316
+
+        Dyson loops    32 EF   =       -0.076258 erref = 0.01414098
+
+ KGRN:  QSCA =  0.040693
+
+ Potential parameters, charge densities, and potential stored on:    14-Dec-22
+
+ MLTPM:    Multipole moments
+
+  IQ    s      y      z      x      xy     yz   3zz-1    xz   xx-yy  3xx y
+  xyz   5zz y  5zz z  5zz x  xx  z  3yy x
+ 
+   1 11.0192 0.0000 0.0000 0.0000-0.0000-0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+ Tot 11.0192
+
+ MLTPM:    Non vanishing higher moments for IQ =  1
+
+            21 -0.001239
+            25 -0.001047
+            43  0.000028
+            47 -0.000074
+
+ Linear loop not converged
+
+ OPTPOT:   Fbar =  0.000000 g = -0.713365 VolI =  0.000000
+
+           VMTZ(Up,Dwn) =      -0.713365
+
+ KGRN:  Iteration no.   6 Etot =     -102.855300 erren = 0.00307999
+
+        Dyson loops    32 EF   =       -0.083013 erref = 0.00686642
+
+ KGRN:  QSCA =  0.038671
+
+ Potential parameters, charge densities, and potential stored on:    14-Dec-22
+
+ MLTPM:    Multipole moments
+
+  IQ    s      y      z      x      xy     yz   3zz-1    xz   xx-yy  3xx y
+  xyz   5zz y  5zz z  5zz x  xx  z  3yy x
+ 
+   1 11.0186 0.0000-0.0000 0.0000-0.0000-0.0000 0.0000 0.0000-0.0000 0.0000 0.0000 0.0000-0.0000 0.0000 0.0000 0.0000
+ Tot 11.0186
+
+ MLTPM:    Non vanishing higher moments for IQ =  1
+
+            21 -0.001223
+            25 -0.001034
+            43  0.000028
+            47 -0.000074
+
+ Linear loop not converged
+
+ OPTPOT:   Fbar =  0.000000 g = -0.714121 VolI =  0.000000
+
+           VMTZ(Up,Dwn) =      -0.714121
+
+ KGRN:  Iteration no.   7 Etot =     -102.855204 erren = 0.00009656
+
+        Dyson loops    32 EF   =       -0.088202 erref = 0.00516839
+
+ KGRN:  QSCA =  0.037643
+
+ Potential parameters, charge densities, and potential stored on:    14-Dec-22
+
+ MLTPM:    Multipole moments
+
+  IQ    s      y      z      x      xy     yz   3zz-1    xz   xx-yy  3xx y
+  xyz   5zz y  5zz z  5zz x  xx  z  3yy x
+ 
+   1 11.0182 0.0000 0.0000 0.0000 0.0000-0.0000-0.0000 0.0000 0.0000 0.0000-0.0000 0.0000-0.0000 0.0000 0.0000 0.0000
+ Tot 11.0182
+
+ MLTPM:    Non vanishing higher moments for IQ =  1
+
+            21 -0.001224
+            25 -0.001034
+            43  0.000028
+            47 -0.000073
+
+ Linear loop not converged
+
+ OPTPOT:   Fbar =  0.000000 g = -0.714432 VolI =  0.000000
+
+           VMTZ(Up,Dwn) =      -0.714432
+
+ KGRN:  Iteration no.   8 Etot =     -102.856126 erren = 0.00092193
+
+        Dyson loops    32 EF   =       -0.091687 erref = 0.00352676
+
+ KGRN:  QSCA =  0.037083
+
+ Potential parameters, charge densities, and potential stored on:    14-Dec-22
+
+ MLTPM:    Multipole moments
+
+  IQ    s      y      z      x      xy     yz   3zz-1    xz   xx-yy  3xx y
+  xyz   5zz y  5zz z  5zz x  xx  z  3yy x
+ 
+   1 11.0178 0.0000 0.0000 0.0000-0.0000-0.0000 0.0000 0.0000-0.0000 0.0000-0.0000 0.0000 0.0000 0.0000-0.0000 0.0000
+ Tot 11.0178
+
+ MLTPM:    Non vanishing higher moments for IQ =  1
+
+            21 -0.001232
+            25 -0.001041
+            43  0.000027
+            47 -0.000073
+
+ Linear loop not converged
+
+ OPTPOT:   Fbar =  0.000000 g = -0.714511 VolI =  0.000000
+
+           VMTZ(Up,Dwn) =      -0.714511
+
+ KGRN:  Iteration no.   9 Etot =     -102.857336 erren = 0.00120993
+
+        Dyson loops    32 EF   =       -0.093503 erref = 0.00182815
+
+ KGRN:  QSCA =  0.036808
+
+ Potential parameters, charge densities, and potential stored on:    14-Dec-22
+
+ MLTPM:    Multipole moments
+
+  IQ    s      y      z      x      xy     yz   3zz-1    xz   xx-yy  3xx y
+  xyz   5zz y  5zz z  5zz x  xx  z  3yy x
+ 
+   1 11.0175 0.0000-0.0000 0.0000-0.0000-0.0000 0.0000 0.0000-0.0000 0.0000-0.0000 0.0000-0.0000 0.0000 0.0000 0.0000
+ Tot 11.0175
+
+ MLTPM:    Non vanishing higher moments for IQ =  1
+
+            21 -0.001224
+            25 -0.001035
+            43  0.000027
+            47 -0.000072
+
+ Linear loop not converged
+
+ OPTPOT:   Fbar =  0.000000 g = -0.714535 VolI =  0.000000
+
+           VMTZ(Up,Dwn) =      -0.714535
+
+ KGRN:  Iteration no.  10 Etot =     -102.857880 erren = 0.00054467
+
+        Dyson loops    32 EF   =       -0.094397 erref = 0.00088549
+
+ KGRN:  QSCA =  0.036669
+
+ Potential parameters, charge densities, and potential stored on:    14-Dec-22
+
+ MLTPM:    Multipole moments
+
+  IQ    s      y      z      x      xy     yz   3zz-1    xz   xx-yy  3xx y
+  xyz   5zz y  5zz z  5zz x  xx  z  3yy x
+ 
+   1 11.0174 0.0000 0.0000 0.0000 0.0000-0.0000 0.0000 0.0000-0.0000 0.0000-0.0000 0.0000 0.0000 0.0000-0.0000 0.0000
+ Tot 11.0174
+
+ MLTPM:    Non vanishing higher moments for IQ =  1
+
+            21 -0.001225
+            25 -0.001035
+            43  0.000027
+            47 -0.000072
+
+ Linear loop not converged
+
+ OPTPOT:   Fbar =  0.000000 g = -0.714532 VolI =  0.000000
+
+           VMTZ(Up,Dwn) =      -0.714532
+
+ KGRN:  Iteration no.  11 Etot =     -102.858177 erren = 0.00029669
+
+        Dyson loops    32 EF   =       -0.094816 erref = 0.00041518
+
+ KGRN:  QSCA =  0.036605
+
+ Potential parameters, charge densities, and potential stored on:    14-Dec-22
+
+ MLTPM:    Multipole moments
+
+  IQ    s      y      z      x      xy     yz   3zz-1    xz   xx-yy  3xx y
+  xyz   5zz y  5zz z  5zz x  xx  z  3yy x
+ 
+   1 11.0174 0.0000-0.0000 0.0000-0.0000-0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000-0.0000 0.0000-0.0000 0.0000
+ Tot 11.0174
+
+ MLTPM:    Non vanishing higher moments for IQ =  1
+
+            21 -0.001226
+            25 -0.001036
+            43  0.000027
+            47 -0.000072
+
+ Linear loop not converged
+
+ OPTPOT:   Fbar =  0.000000 g = -0.714518 VolI =  0.000000
+
+           VMTZ(Up,Dwn) =      -0.714518
+
+ KGRN:  Iteration no.  12 Etot =     -102.858381 erren = 0.00020390
+
+        Dyson loops    32 EF   =       -0.095047 erref = 0.00022906
+
+ KGRN:  QSCA =  0.036580
+
+ Potential parameters, charge densities, and potential stored on:    14-Dec-22
+
+ MLTPM:    Multipole moments
+
+  IQ    s      y      z      x      xy     yz   3zz-1    xz   xx-yy  3xx y
+  xyz   5zz y  5zz z  5zz x  xx  z  3yy x
+ 
+   1 11.0173 0.0000-0.0000 0.0000 0.0000-0.0000 0.0000 0.0000 0.0000 0.0000-0.0000 0.0000-0.0000 0.0000 0.0000 0.0000
+ Tot 11.0173
+
+ MLTPM:    Non vanishing higher moments for IQ =  1
+
+            21 -0.001227
+            25 -0.001037
+            43  0.000027
+            47 -0.000072
+
+ Linear loop not converged
+
+ OPTPOT:   Fbar =  0.000000 g = -0.714512 VolI =  0.000000
+
+           VMTZ(Up,Dwn) =      -0.714512
+
+ KGRN:  Iteration no.  13 Etot =     -102.858430 erren = 0.00004963
+
+        Dyson loops    32 EF   =       -0.095119 erref = 0.00006687
+
+ KGRN:  QSCA =  0.036574
+
+ Potential parameters, charge densities, and potential stored on:    14-Dec-22
+
+ MLTPM:    Multipole moments
+
+  IQ    s      y      z      x      xy     yz   3zz-1    xz   xx-yy  3xx y
+  xyz   5zz y  5zz z  5zz x  xx  z  3yy x
+ 
+   1 11.0173 0.0000-0.0000 0.0000-0.0000-0.0000 0.0000 0.0000-0.0000 0.0000-0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+ Tot 11.0173
+
+ MLTPM:    Non vanishing higher moments for IQ =  1
+
+            21 -0.001227
+            25 -0.001037
+            43  0.000027
+            47 -0.000072
+
+ Linear loop not converged
+
+ OPTPOT:   Fbar =  0.000000 g = -0.714509 VolI =  0.000000
+
+           VMTZ(Up,Dwn) =      -0.714509
+
+ KGRN:  Iteration no.  14 Etot =     -102.858441 erren = 0.00001026
+
+        Dyson loops    32 EF   =       -0.095144 erref = 0.00002418
+
+ KGRN:  QSCA =  0.036572
+
+ Potential parameters, charge densities, and potential stored on:    14-Dec-22
+
+ MLTPM:    Multipole moments
+
+  IQ    s      y      z      x      xy     yz   3zz-1    xz   xx-yy  3xx y
+  xyz   5zz y  5zz z  5zz x  xx  z  3yy x
+ 
+   1 11.0173 0.0000-0.0000 0.0000 0.0000-0.0000 0.0000 0.0000-0.0000 0.0000-0.0000 0.0000 0.0000 0.0000-0.0000 0.0000
+ Tot 11.0173
+
+ MLTPM:    Non vanishing higher moments for IQ =  1
+
+            21 -0.001227
+            25 -0.001037
+            43  0.000027
+            47 -0.000072
+
+ Linear loop not converged
+
+ OPTPOT:   Fbar =  0.000000 g = -0.714507 VolI =  0.000000
+
+           VMTZ(Up,Dwn) =      -0.714507
+
+ KGRN:  Iteration no.  15 Etot =     -102.858443 erren = 0.00000226
+
+        Dyson loops    32 EF   =       -0.095149 erref = 0.00000437
+
+ KGRN:  QSCA =  0.036571
+
+ Potential parameters, charge densities, and potential stored on:    14-Dec-22
+
+ MLTPM:    Multipole moments
+
+  IQ    s      y      z      x      xy     yz   3zz-1    xz   xx-yy  3xx y
+  xyz   5zz y  5zz z  5zz x  xx  z  3yy x
+ 
+   1 11.0173 0.0000-0.0000 0.0000 0.0000-0.0000 0.0000 0.0000-0.0000 0.0000-0.0000 0.0000 0.0000 0.0000-0.0000 0.0000
+ Tot 11.0173
+
+ MLTPM:    Non vanishing higher moments for IQ =  1
+
+            21 -0.001227
+            25 -0.001037
+            43  0.000027
+            47 -0.000072
+
+ Linear loop not converged
+
+ OPTPOT:   Fbar =  0.000000 g = -0.714507 VolI =  0.000000
+
+           VMTZ(Up,Dwn) =      -0.714507
+
+ KGRN:  Iteration no.  16 Etot =     -102.858443 erren = 0.00000038
+
+        Dyson loops    32 EF   =       -0.095149 erref = 0.00000041
+
+ KGRN:  QSCA =  0.036570
+
+ Potential parameters, charge densities, and potential stored on:    14-Dec-22
+
+ MLTPM:    Multipole moments
+
+  IQ    s      y      z      x      xy     yz   3zz-1    xz   xx-yy  3xx y
+  xyz   5zz y  5zz z  5zz x  xx  z  3yy x
+ 
+   1 11.0173 0.0000-0.0000 0.0000-0.0000-0.0000 0.0000 0.0000-0.0000 0.0000 0.0000 0.0000-0.0000 0.0000-0.0000 0.0000
+ Tot 11.0173
+
+ MLTPM:    Non vanishing higher moments for IQ =  1
+
+            21 -0.001227
+            25 -0.001037
+            43  0.000027
+            47 -0.000072
+
+ Linear loop not converged
+
+ OPTPOT:   Fbar =  0.000000 g = -0.714507 VolI =  0.000000
+
+           VMTZ(Up,Dwn) =      -0.714507
+
+ KGRN:  Iteration no.  17 Etot =     -102.858443 erren = 0.00000010
+
+        Dyson loops    32 EF   =       -0.095148 erref = 0.00000139
+
+ KGRN:  QSCA =  0.036570
+
+ Potential parameters, charge densities, and potential stored on:    14-Dec-22
+
+ MLTPM:    Multipole moments
+
+  IQ    s      y      z      x      xy     yz   3zz-1    xz   xx-yy  3xx y
+  xyz   5zz y  5zz z  5zz x  xx  z  3yy x
+ 
+   1 11.0173 0.0000-0.0000 0.0000-0.0000-0.0000 0.0000 0.0000-0.0000 0.0000-0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+ Tot 11.0173
+
+ MLTPM:    Non vanishing higher moments for IQ =  1
+
+            21 -0.001227
+            25 -0.001037
+            43  0.000027
+            47 -0.000072
+
+ Linear loop not converged
+
+ OPTPOT:   Fbar =  0.000000 g = -0.714507 VolI =  0.000000
+
+           VMTZ(Up,Dwn) =      -0.714507
+
+ KGRN:  Iteration no.  18 Etot =     -102.858444 erren = 0.00000002
+
+        Dyson loops    32 EF   =       -0.095146 erref = 0.00000124
+
+ KGRN:  QSCA =  0.036570
+
+ Potential parameters, charge densities, and potential stored on:    14-Dec-22
+
+ MLTPM:    Multipole moments
+
+  IQ    s      y      z      x      xy     yz   3zz-1    xz   xx-yy  3xx y
+  xyz   5zz y  5zz z  5zz x  xx  z  3yy x
+ 
+   1 11.0173 0.0000 0.0000 0.0000 0.0000-0.0000 0.0000 0.0000-0.0000 0.0000 0.0000 0.0000 0.0000 0.0000-0.0000 0.0000
+ Tot 11.0173
+
+ MLTPM:    Non vanishing higher moments for IQ =  1
+
+            21 -0.001227
+            25 -0.001037
+            43  0.000027
+            47 -0.000072
+
+ Linear loop not converged
+
+ OPTPOT:   Fbar =  0.000000 g = -0.714507 VolI =  0.000000
+
+           VMTZ(Up,Dwn) =      -0.714507
+
+ KGRN:  Iteration no.  19 Etot =     -102.858444 erren = 0.00000000
+
+        Dyson loops    32 EF   =       -0.095146 erref = 0.00000087
+
+ KGRN:  QSCA =  0.036569
+
+ Potential parameters, charge densities, and potential stored on:    14-Dec-22
+
+ MLTPM:    Multipole moments
+
+  IQ    s      y      z      x      xy     yz   3zz-1    xz   xx-yy  3xx y
+  xyz   5zz y  5zz z  5zz x  xx  z  3yy x
+ 
+   1 11.0173 0.0000-0.0000 0.0000-0.0000-0.0000 0.0000 0.0000-0.0000 0.0000-0.0000 0.0000 0.0000 0.0000-0.0000 0.0000
+ Tot 11.0173
+
+ MLTPM:    Non vanishing higher moments for IQ =  1
+
+            21 -0.001227
+            25 -0.001037
+            43  0.000027
+            47 -0.000072
+
+ Linear loop not converged
+
+ OPTPOT:   Fbar =  0.000000 g = -0.714507 VolI =  0.000000
+
+           VMTZ(Up,Dwn) =      -0.714507
+
+ KGRN:  Iteration no.  20 Etot =     -102.858443 erren = 0.00000001
+
+        Dyson loops    32 EF   =       -0.095145 erref = 0.00000055
+
+ KGRN:  QSCA =  0.036569
+
+ Potential parameters, charge densities, and potential stored on:    14-Dec-22
+
+ MLTPM:    Multipole moments
+
+  IQ    s      y      z      x      xy     yz   3zz-1    xz   xx-yy  3xx y
+  xyz   5zz y  5zz z  5zz x  xx  z  3yy x
+ 
+   1 11.0173 0.0000-0.0000 0.0000-0.0000-0.0000 0.0000 0.0000-0.0000 0.0000-0.0000 0.0000 0.0000 0.0000-0.0000 0.0000
+ Tot 11.0173
+
+ MLTPM:    Non vanishing higher moments for IQ =  1
+
+            21 -0.001227
+            25 -0.001037
+            43  0.000027
+            47 -0.000072
+
+ Linear loop not converged
+
+ OPTPOT:   Fbar =  0.000000 g = -0.714507 VolI =  0.000000
+
+           VMTZ(Up,Dwn) =      -0.714507
+
+ KGRN:  Iteration no.  21 Etot =     -102.858443 erren = 0.00000001
+
+        Dyson loops    32 EF   =       -0.095145 erref = 0.00000032
+
+ KGRN:  QSCA =  0.036569
+
+ Potential parameters, charge densities, and potential stored on:    14-Dec-22
+
+ MLTPM:    Multipole moments
+
+  IQ    s      y      z      x      xy     yz   3zz-1    xz   xx-yy  3xx y
+  xyz   5zz y  5zz z  5zz x  xx  z  3yy x
+ 
+   1 11.0173 0.0000 0.0000 0.0000-0.0000-0.0000 0.0000 0.0000-0.0000 0.0000-0.0000 0.0000-0.0000 0.0000 0.0000 0.0000
+ Tot 11.0173
+
+ MLTPM:    Non vanishing higher moments for IQ =  1
+
+            21 -0.001227
+            25 -0.001037
+            43  0.000027
+            47 -0.000072
+
+ OPTPOT:   Fbar =  0.000000 g = -0.714507 VolI =  0.000000
+
+           VMTZ(Up,Dwn) =      -0.714507
+
+ KGRN:  Iteration no.  22 Etot =     -102.858443 erren = 0.00000001
+
+        Dyson loops    28 EF   =       -0.095144 erref = 0.00000018
+
+ KGRN:  QSCA =  0.036569
+
+ Potential parameters, charge densities, and potential stored on:    14-Dec-22
+
+ MLTPM:    Multipole moments
+
+  IQ    s      y      z      x      xy     yz   3zz-1    xz   xx-yy  3xx y
+  xyz   5zz y  5zz z  5zz x  xx  z  3yy x
+ 
+   1 11.0173 0.0000-0.0000 0.0000 0.0000-0.0000 0.0000 0.0000-0.0000 0.0000-0.0000 0.0000-0.0000 0.0000-0.0000 0.0000
+ Tot 11.0173
+
+ MLTPM:    Non vanishing higher moments for IQ =  1
+
+            21 -0.001227
+            25 -0.001037
+            43  0.000027
+            47 -0.000072
+
+ OPTPOT:   Fbar =  0.000000 g = -0.714507 VolI =  0.000000
+
+           VMTZ(Up,Dwn) =      -0.714507
+
+ KGRN:  Iteration no.  23 Etot =     -102.858443 erren = 0.00000000
+
+        Dyson loops    22 EF   =       -0.095144 erref = 0.00000010
+
+ KGRN:  QSCA =  0.036569
+
+ Potential parameters, charge densities, and potential stored on:    14-Dec-22
+
+ EBTOP:      Bot       Top
+
+            -0.780465 10.541161
+
+         DOS(EF) =  5.917985
+
+ ZMESH:    Semi-elliptic contour
+
+ ZMESH:    ELT  = 11.000000 EB   = -0.174765 EFX= -0.095144
+           DELTA=  0.079621 b/a  = -0.062500 EPS=  0.200000
+
+           LZ     Re(z)     Im(z)    Weight
+
+            1  -0.173978 -0.000698  0.004037 -0.001782
+            2  -0.157470 -0.003097  0.029479 -0.002318
+            3  -0.128319 -0.004524  0.023505 -0.000673
+            4  -0.111626 -0.004869  0.011188 -0.000148
+            5  -0.103649 -0.004948  0.005561 -0.000037
+            6  -0.099461 -0.004969  0.003139 -0.000011
+            7  -0.096972 -0.004975  0.001942 -0.000003
+            8  -0.095518 -0.004976  0.000937 -0.000000
+            9  -0.094770 -0.004976  0.000937  0.000000
+           10  -0.093316 -0.004975  0.001942  0.000003
+           11  -0.090828 -0.004969  0.003139  0.000011
+           12  -0.086639 -0.004948  0.005561  0.000037
+           13  -0.078663 -0.004869  0.011188  0.000148
+           14  -0.061969 -0.004524  0.023505  0.000673
+           15  -0.032819 -0.003097  0.029479  0.002318
+           16  -0.016310 -0.000698  0.004037  0.001782
+
+ ZMESH:    Semi-circular contour
+
+
+           ELT  = 11.000000 EB   = -1.595144 EFX= -0.095144
+           DEPTH=  1.000000 DELTA=  0.079621 EPS=  0.200000
+
+           LZ     Re(z)     Im(z)    Weight
+
+            1  -1.094532 -0.024738  0.003113 -0.062850
+            2  -1.079496 -0.124112  0.033622 -0.131212
+            3  -1.014475 -0.272326  0.100905 -0.155375
+            4  -0.876335 -0.413439  0.171794 -0.116842
+            5  -0.684853 -0.491887  0.202148 -0.036867
+            6  -0.489519 -0.488716  0.181335  0.039191
+            7  -0.331460 -0.424818  0.132733  0.082387
+            8  -0.224068 -0.335115  0.083534  0.092498
+            9  -0.160034 -0.246331  0.046989  0.083000
+           10  -0.125445 -0.171413  0.024235  0.066407
+           11  -0.108195 -0.113490  0.011595  0.049750
+           12  -0.100214 -0.071018  0.005123  0.035705
+           13  -0.096834 -0.041065  0.002034  0.024677
+           14  -0.095578 -0.020820  0.000674  0.016174
+           15  -0.095210 -0.008116  0.000154  0.009475
+           16  -0.095147 -0.001503  0.000012  0.003880
+
+           LX     Re(z)     Im(z)
+
+            1  -0.097147 -0.001503
+            2  -0.096147 -0.001503
+            3  -0.095147 -0.001503
+            4  -0.094147 -0.001503
+            5  -0.093147 -0.001503
+
+ Atom:Cu              S =    2.686842        SWS =    2.686842
+ Exch:P-W                              Date : 14-Dec-22
+
+ Panel	    =  1   s -1/2      p -1/2      d -1/2      f -1/2
+
+ E-nu       =   -0.488523   -0.349857   -0.297205   -0.307604
+ D-nu       =   -0.720636    0.269892   -2.460314    2.559847
+ Dnud       =    5.399660    7.102145    1.851157   12.316788
+ Omega-     =    0.095490    0.940987    0.010402    4.361535
+ S*Phisq-   =   -0.326893    0.311171    0.017130    0.397580
+ Phi-/Phi+  =    0.843742    0.670407   -0.030682    0.570994
+
+ Mu         =    0.847501    0.890322   16.172900    0.696821
+ Tau        =    0.905004    1.000380    0.053287    1.022343
+ A          =    1.698971    3.423450   -0.203702   10.541161
+ C          =   -0.393032    0.591130   -0.286803    4.053931
+ B          =   -0.780465   -0.206465   -0.421476    1.947138
+ V          =   -0.780465   -0.801324    2.504746   -0.820132
+ D(Ef)      =   -2.079232   -0.225792    4.800751    2.364898
+
+ Bot, Top   =   -0.780465   10.541161
+ V-Madelung =   -0.014743
+ V(S) Up,Dwn=   -0.714507
+ V(W) Up,Dwn=   -0.714507
+
+ EF         =   -0.095144
+
+ VMTZ Up,Dwn=   -0.714507
+
+ Atom:Cu  
+
+ Panel	    =  1   s -1/2      p -1/2      d -1/2      f -1/2
+
+ Nos(Ef)    =    0.719983    0.677092    9.571365    0.031561   11.000000
+ Dos(Ef)    =    0.670356    1.537780    2.165622    0.022154    4.395912
+ Hopfield   =    0.016721 (Ry/Bohr^2),     0.812424 (eV/AA^2)
+
+ PRNPRM:   EONE =     -3.442977 VINT =   -190.598289 EKIN =    187.155313
+           ECOR =    454.396473 ENUC =   -821.253351 EMADL=      0.000012
+           EVAL =    101.540036 EXCT =   -130.020627 EXCC =   -105.323700
+           ETOT =   -102.858443 OKAE =      0.000000 E[n] =   -102.858443
+            T*S =      0.000000 E-TS =   -102.858443
+
+           Valence energies in the frozen core approximation (Rydbergs)
+           calculated from output charge density:
+
+           Kinetic energy       187.155313
+           Madelung energy        0.000012
+           El-ion energy       -821.253351
+           El-el energy         555.936509
+           Exc energy           -24.696927
+                              ------------
+           Total               -102.858443
+           Total+OKAE          -102.858443
+           Total+Ewald         -102.838103 4pi SS n(S)=  2.873312
+                              ============
+
+result   2.686842   -102.858443 -0.619363 -0.095144 -0.714507
+
+ Converged in 24 iterations at 15:20  14-Dec-22
+
+ Potential parameters, charge densities, and potential stored on:    14-Dec-22
+
+ Calculation of the full charge density, lmaxh =  8
+
+ KKRFCD: NOS(Ef) = 11.000000 ELT = 11.000000
+
+ MGAUN:    Generate real Gaunt numbers
+
+ MGAUNT:   NGAUNT = 23621
+
+ GRNFCD: Construct the full charge density
+
+ ROTCHD:   Performe the 3D rotations
+
+ ELDENS:   Multipole moments
+
+  IQ    s      y      z      x      xy     yz   3zz-1    xz   xx-yy  3xx y
+  xyz   5zz y  5zz z  5zz x  xx  z  3yy x
+ 
+   1 11.0477 0.0000-0.0000 0.0000 0.0000 0.0000 0.0000 0.0000-0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000
+ Tot 11.0477
+
+ ELDENS:   Non vanishing higher moments for IQ =  1 ITA = 1
+
+            21 -0.003369
+            25 -0.002847
+            43 -0.000969
+            47  0.002565
+            73  0.000240
+            77  0.000128
+            81  0.000195
+
+ Calculation of the SCA full charge density, lmax =  3
+
+ KKRFCD: NOS(Ef) = 11.000000 ELT = 11.000000
+
+ MGAUN:    Generate real Gaunt numbers
+
+ MGAUNT:   NGAUNT =   708
+
+ GRNFCD: Construct the full charge density
+
+ ROTCHD:   Performe the 3D rotations
+
+ ELDENS:   Multipole moments
+
+  IQ    s      y      z      x      xy     yz   3zz-1    xz   xx-yy  3xx y
+  xyz   5zz y  5zz z  5zz x  xx  z  3yy x
+ 
+   1 11.0366 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000 0.0000-0.0000 0.0000-0.0000 0.0000-0.0000 0.0000-0.0000 0.0000
+ Tot 11.0366
+
+ ELDENS:   Non vanishing higher moments for IQ =  1 ITA = 1
+
+            21 -0.001227
+            25 -0.001037
+            43  0.000027
+            47 -0.000072
+
+ Full charge density stored on:14-Dec-22
+
+ KGRN calculation finished at 15:22 on 14-Dec-22

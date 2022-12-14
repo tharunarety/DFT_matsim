@@ -1,0 +1,38 @@
+
+
+*******************************************************************************
+Wed Dec 14 15:58:48 2022
+
+
+FIT:    data read from 'ETOT_SCF_C44.dat'
+        format = z
+        #datapoints = 6
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+	f(x)=a*x**2+b*x+c
+fitted parameters initialized with current variable values
+
+iter      chisq       delta/lim  lambda   a             b             c            
+   0 6.4724190975e+04   0.00e+00  5.78e-01    1.000000e+00   1.000000e+00   1.000000e+00
+   7 6.0065714300e-10  -2.00e-05  5.78e-07    2.021071e+00  -3.430715e-03  -1.028381e+02
+
+After 7 iterations the fit converged.
+final sum of squares of residuals : 6.00657e-10
+rel. change during last iteration : -2.00061e-10
+
+degrees of freedom    (FIT_NDF)                        : 3
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.41499e-05
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.00219e-10
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+a               = 2.02107          +/- 0.02316      (1.146%)
+b               = -0.00343071      +/- 0.001206     (35.16%)
+c               = -102.838         +/- 1.282e-05    (1.247e-05%)
+
+correlation matrix of the fit parameters:
+                a      b      c      
+a               1.000 
+b              -0.960  1.000 
+c               0.602 -0.763  1.000 
