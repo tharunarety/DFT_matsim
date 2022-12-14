@@ -1,0 +1,87 @@
+ FHNDLR:   Program: KSTR, Version: LV 23 Jan 2008                    TM: 14:41
+           Slope matrices, bco (spdf) DeltaE/V = 2C44e^2+O[e^4] (e=0.07-Dec-22  
+
+           JOB   : bco3      
+           FOR001: smx/bco3.tfm                                                
+           For002: smx/bco3.tfh                                                
+           FOR006: ./bco3.prn                                                  
+
+ INPUT:    MODE  =  B STORE =  Y NPRN  =  0
+
+           NL   =  4 NLH  = 11 NLW  =  9 NDER =  6
+
+           DMAX    =  2.220000 DWATS  =  0.100000
+
+           (K*W)^2 =  0.000000 ITRANS = 3
+
+ PRIMV:    Default choice of primitive vectors.
+
+           A     =  1.000000 B     =  0.941748 C     =  1.374260
+           ALPHA = 90.000000 BETA  = 90.000000 GAMMA = 90.000000
+
+           Primitive vectors for  Bco lattice in
+           units of the lattice spacing a:
+
+           (   0.50000,  -0.47087,   0.68713 )
+           (   0.50000,   0.47087,  -0.68713 )
+           (  -0.50000,   0.47087,   0.68713 )
+
+           Basis vectors:            NQ3 =   1
+
+           (   0.00000,   0.00000,   0.00000 )
+ WARNING: BA =   1.0000000000000000       and BOA =  0.94174756999999998     
+ WARNING: CA =   1.0000000000000000       and COA =   1.3742597000000001     
+
+
+ PRIMKR:   Wigner Seitz radius:  0.536572 VOL   =  0.647103
+
+
+           Primitive vectors of reciprocal space
+           in units of 2*pi/a
+
+           (   1.00000,   0.00000,   0.72766  )
+           (   1.00000,   1.06186,   0.00000  )
+           (   0.00000,   1.06186,   0.72766  )
+
+ SET3D:    Basis vectors in 3D cell are set.
+
+ LATT3D:   Generate lattice vectors, NGHBP = 13
+
+           Number of vectors:  79. Number of shells: 17
+
+ BLATTS:   IQ  =  1 NSC = 18 NVN = 12 V(t)= 0.647103 V(a)= 0.647103
+
+           Si = 0.470874 Sc = 0.686820 WST= 0.536572 WST/WS= 1.000000
+
+ SCREEN:   Hard sphere radii in units of ws:
+
+           site         s       p       d       f
+
+             1     0.7000  0.7000  0.7000  0.7000
+
+ MGAUNT:   NGAUNT =  7950 NGAUNTW =  5208
+
+ ***       Calculate and store 3D Madelung matrices
+
+ LATT3M:   R1    =    0.0000 RA    =    1.8000 G1    =    0.0000
+           GA    =   22.5000
+
+
+           NUMR  =  7 NUMG  =  9 NUMVR = 43 NUMVG =125
+
+ MADL3D:   Madelung constant with compensating background:
+
+           CMDL =   1.79107638
+
+           Madelung monopole potential(s):
+
+
+            -3.58215276
+
+ ***       End of Madelung calculation
+
+ STORES:   Slope matrices low-low stored on FOR001
+
+ STOREH:   Slope matrices high-low stored on FOR002
+
+ KSTR:     Finished at : 14:42
